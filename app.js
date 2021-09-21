@@ -50,3 +50,31 @@ Fruit.find(function (err, fruits) {
     });
   }
 });
+
+// Fruit.updateOne(
+//   { _id: "61498d919dab9c443a7eeff6" },
+//   { name: "Peach" },
+//   function (err) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log("Successfully updated the document.");
+//     }
+//   }
+// );
+
+// Fruit.deleteOne({ name: "Apple" }, function (err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("Successfully deleted the document.");
+//   }
+// });
+
+Fruit.deleteMany({ name: "Apple" }, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully deleted all the document.");
+  }
+});
